@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Cihan Ekici (0xce)</title>
+    <meta name="Description" CONTENT="Personal Website of Cihan Ekici">
+    <script type="text/javascript" src="jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="jquery.mousewheel.js"></script>
+    <script type="text/javascript" src="jquery.terminal-0.7.6.min.js"></script>
+    <link href="http://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="jquery.terminal.css" />
+    <script type="text/javascript">
+      $(function() {
+        var whoisMsg = 'This is [[;;;hilite]Cihan Ekici]: A programmer who\n' +
+          '* is from [[;;;hilite]Istanbul], Turkiye\n' +
+          '* is a [[;;;hilite]father] of a son (try [[;;;command]bk] command to see him)\n' +
+          '* likes to code in [[;;;hilite]C], [[;;;hilite]C#] and [[;;;hilite]Python]\n' +
+          '* likes to see [[;;;hilite]everything as files] which you can cat & grep\n' +
+          '* thinks [[;;;hilite]programming is blocking] and synchronous I/O multiplexing is the answer\n' +
+          '  to all of life\'s problems\n' +
+          '* has worked on things like\n' +
+          '  - Embedded [[;;;hilite]Linux] projects\n' +
+          '  - [[;;;hilite]ISO 7816] Smart Cards\n' +
+          '  - [[;;;hilite]MIFARE] contactless tags\n' +
+          '  - [[;;;hilite]Access Control] solutions\n' +
+          '  - [[;;;hilite]E-commerce] applications\n' +
+          '  - [[;;;hilite]Prepaid] payment systems\n' +
+          '  - [[;;;hilite]Loyalty] applications\n' +
+          '* leans to vi/vim only if /usr/bin/[[;;;hilite]emacs] is not present\n' +
+          '* has authored [[;;;hilite]wumpus], a statically-typed, procedural programming language,\n' +
+          '  running on its own stack machine\n' +
+          '* measures, measures and [[;;;hilite]measures]\n' +
+          '* has yet to put together a decent non-[[;;;hilite]console] UI; hence this site\n' +
+          '* likes to grok everything [[;;;hilite]computers] related';
+
+        var helpMsg = '[[;;;command]whois]     print out who ce is\n' +
+          '[[;;;command]blog]      open ce\'s blog [[;;;ref]¹]\n' +
+          '[[;;;command]github]    open ce\'s github profile [[;;;ref]¹]\n' +
+          '[[;;;command]linkedin]  open ce\'s linkedin profile [[;;;ref]¹]\n' +
+          '[[;;;command]exit]      exit the site [[;;;ref]¹]\n' +
+          '[[;;;command]clear]     clear the terminal screen\n' +
+          '[[;;;command]help]      display this\n' +
+          '\n' +
+          'Commands marked with [[;;;ref]¹] will make you leave this terminal\n' +
+          'Unfortunately, this is not an ordinary UNIX shell which you can cat, grep or pipe';
+
+        var commands = {
+          help: function() { this.echo(helpMsg); },
+          bk: function() { window.location.href = 'http://bilgekaanekici.com'; },
+          whois: function() { this.echo(whoisMsg); },
+          blog: function() { window.location.href = 'http://blog.0xce.com'; },
+          github: function() { window.location.href = 'https://github.com/0xce'; },
+          linkedin: function() { window.location.href = 'http://linkedin.com/in/cihanekici'; },
+          exit: function() { window.location.href = 'about:blank'; },
+          echo: function(what) {
+            if (what == '$?') {
+              // "These functions are always successful" -- getpid man page
+              this.echo('0');
+            } else {
+              this.error('I can only echo the exit status variable');
+            }
+          }
+        };
+
+        var options = {
+          greetings: 'Welcome to personal website of [[g;#8cd0d3;]Cihan Ekici]\n\nType [[;;;command]help] to get a list of available commands\n',
+          prompt: '$ ',
+          tabcompletion: true,
+          exit: false
+        };
+
+        $('#tty').terminal(commands, options);
+      });
+    </script>
+  </head>
+  <body>
+    <div id="tty"></div>
+  </body>
+</html>
