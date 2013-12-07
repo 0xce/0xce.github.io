@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+	<title><![CDATA[ce's blog]]></title>
+	<link href="http://0xce.com/blog/atom.xml" rel="self"/>
+	<link href="http://0xce.com/blog/"/>
+	<updated>2013-12-07T04:26:23+02:00</updated>
+	<id>http://0xce.com/blog/</id>
+	<author>
+		<name><![CDATA[Cihan Ekici]]></name>
+		
+	</author>
+	<generator uri="http://octopress.org/">Octopress</generator>
+
+	
+	<entry>
+		
+			<title type="html"><![CDATA[Hello World!\n]]></title>
+		
+		<link href="http://0xce.com/blog/hello-world/"/>
+		<updated>2013-12-07T04:07:30+02:00</updated>
+		<id>http://0xce.com/blog/hello-world</id>
+		<content type="html">
+			<![CDATA[
+				
+					<p></p>
+				
+			]]>
+			<![CDATA[<p>This is an obligatory first post from a new blogger :)</p>
+
+<p>I&rsquo;m Cihan Ekici, a programmer from Istanbul, Turkiye. Beside acting as yet another entropy source for net&rsquo;s /dev/random implementation, this place will be where I share the tidbits I come across during my journey on things computer related.</p>
+]]>
+		</content>
+	</entry>
+	
+</feed>
