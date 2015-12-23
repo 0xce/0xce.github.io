@@ -34,8 +34,6 @@
           '* likes to grok everything [[;;;hilite]computers] related';
 
         var helpMsg = '[[;;;command]whois]     print out who ce is\n' +
-          '[[;;;command]blog]      open ce\'s blog [[;;;ref]¹]\n' +
-          '[[;;;command]github]    open ce\'s github profile [[;;;ref]¹]\n' +
           '[[;;;command]linkedin]  open ce\'s linkedin profile [[;;;ref]¹]\n' +
           '[[;;;command]exit]      exit the site [[;;;ref]¹]\n' +
           '[[;;;command]clear]     clear the terminal screen\n' +
@@ -48,8 +46,6 @@
           help: function() { this.echo(helpMsg); },
           bk: function() { window.location.href = 'http://bilgekaanekici.com'; },
           whois: function() { this.echo(whoisMsg); },
-          blog: function() { window.location.href = 'http://0xce.com/blog/'; },
-          github: function() { window.location.href = 'https://github.com/0xce'; },
           linkedin: function() { window.location.href = 'https://linkedin.com/in/cihanekici'; },
           exit: function() { window.location.href = 'about:blank'; },
           echo: function(what) {
